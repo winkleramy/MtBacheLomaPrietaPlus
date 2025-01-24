@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_EmergencyVehicleTurnArounds_5 = function(feature, resolution){
+var style_WaterSources_3 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -15,12 +15,13 @@ var style_EmergencyVehicleTurnArounds_5 = function(feature, resolution){
     var textAlign = "left";
     var offsetX = 0;
     var offsetY = 0;
-    var placement = 'line';
+    var placement = 'point';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(219,30,42,1.0)', lineDash: null, lineCap: 'round', lineJoin: 'round', width: 2.508}),
+        image: new ol.style.Circle({radius: 8.0 + size,
+            stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(72,123,182,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

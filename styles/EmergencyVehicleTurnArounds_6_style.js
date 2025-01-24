@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_CommunityBoundary_1 = function(feature, resolution){
+var style_EmergencyVehicleTurnArounds_6 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -15,12 +15,12 @@ var style_CommunityBoundary_1 = function(feature, resolution){
     var textAlign = "left";
     var offsetX = 0;
     var offsetY = 0;
-    var placement = 'point';
+    var placement = 'line';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(31,120,180,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.9}),fill: new ol.style.Fill({color: 'rgba(166,206,227,0.5)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(219,30,42,1.0)', lineDash: null, lineCap: 'round', lineJoin: 'round', width: 2.508}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
