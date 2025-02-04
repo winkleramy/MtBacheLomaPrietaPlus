@@ -24,7 +24,7 @@ var lyr_AssessorParcels_1 = new ol.layer.Vector({
                 source:jsonSource_AssessorParcels_1, 
                 style: style_AssessorParcels_1,
                 popuplayertitle: 'AssessorParcels',
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/AssessorParcels_1.png" /> AssessorParcels'
             });
 var format_CommunityBoundary_2 = new ol.format.GeoJSON();
@@ -119,10 +119,10 @@ lyr_RefugeAreas_5.set('fieldImages', {'id': 'Hidden', 'describe': 'TextEdit', 'A
 lyr_EmergencyVehicleTurnArounds_6.set('fieldImages', {'id': 'Hidden', 'address': 'TextEdit', 'describe': 'TextEdit', });
 lyr_AssessorParcels_1.set('fieldLabels', {'OBJECTID': 'no label', 'APN': 'no label', 'APNNODASH': 'no label', 'SITEADD': 'no label', 'SITEADD2': 'no label', 'USECDDESC': 'no label', 'ACRES': 'no label', 'SQUAREFT': 'no label', 'ZONING': 'no label', 'RURALSVC': 'no label', 'URBANSVC': 'no label', 'ZOOFTOFCA': 'no label', 'ADJ_TO_TP': 'no label', 'GPLANDUSE': 'no label', 'GPBOUNDARY': 'no label', 'AGRESOURCE': 'no label', 'SCENICRES': 'no label', 'GPSPCOM': 'no label', 'COASTALZN': 'no label', 'COASTALAJ': 'no label', 'COASTZNREX': 'no label', 'ARCHEOSITE': 'no label', 'PLNENVTEAM': 'no label', 'FIREDIST': 'no label', 'FLOODCDIST': 'no label', 'RECDIST': 'no label', 'SANITDIST': 'no label', 'SANDISTSOI': 'no label', 'WATERDIST': 'no label', 'WATERSER': 'no label', 'GRASSLANDS': 'no label', 'BIOTIC': 'no label', 'RIPWOODLND': 'no label', 'SPCLFOREST': 'no label', 'SANDHILLS': 'no label', 'SHUNITNAME': 'no label', 'SCLTSSTAT': 'no label', 'SOILSEXPNS': 'no label', 'FAULTZONE': 'no label', 'FLDZONE': 'no label', 'FLOODWAYS': 'no label', 'STREAMTYP': 'no label', 'LAKENAME': 'no label', 'SRESPAREA': 'no label', 'GPSPCOMNME': 'no label', 'SEPTICNITR': 'no label', 'CENSUSUA': 'no label', 'COASTENCR': 'no label', 'ATKINSDFFS': 'no label', 'CZUPDFHA': 'no label', 'SCCBIOTIC': 'no label', 'COASTALBLF': 'no label', 'GEORPTBUF': 'no label', 'CMRBUFFER': 'no label', 'WATBODBUFF': 'no label', 'GEOHAZSCRN': 'no label', 'CODECOMP': 'no label', 'COASTHAZRD': 'no label', 'SPCCONSUB': 'no label', 'SHALLOWGW': 'no label', 'COASTALPRI': 'no label', 'RTCRAILBUF': 'no label', });
 lyr_CommunityBoundary_2.set('fieldLabels', {});
-lyr_WaterSources_3.set('fieldLabels', {'type': 'no label', 'gallons': 'no label', 'material': 'no label', });
+lyr_WaterSources_3.set('fieldLabels', {'type': 'inline label - visible with data', 'gallons': 'inline label - visible with data', 'material': 'inline label - visible with data', });
 lyr_FirewiseSignLocations_4.set('fieldLabels', {'name': 'no label', });
-lyr_RefugeAreas_5.set('fieldLabels', {'describe': 'no label', 'Address': 'no label', });
-lyr_EmergencyVehicleTurnArounds_6.set('fieldLabels', {'address': 'no label', 'describe': 'no label', });
+lyr_RefugeAreas_5.set('fieldLabels', {'describe': 'inline label - visible with data', 'Address': 'inline label - visible with data', });
+lyr_EmergencyVehicleTurnArounds_6.set('fieldLabels', {'address': 'inline label - visible with data', 'describe': 'inline label - visible with data', });
 lyr_EmergencyVehicleTurnArounds_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
