@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-13570205.140077, 4451942.327405, -13566231.620112, 4454325.713147], map.getSize());
+map.getView().fit([-13570143.191551, 4451943.259876, -13566293.555571, 4454324.803426], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -446,12 +446,12 @@ map.addControl(Title)
 var Abstract = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
-        titleElement.className = 'bottom-right-abstract ol-control';
+        titleElement.className = 'top-left-abstract ol-control';
         titleElement.id = 'abstract';
 
         var linkElement = document.createElement('a');
 
-        if (185 > 240) {
+        if (300 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -465,19 +465,19 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.';
+                linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.  Click on map icons to see more information, e. g.  click a blue dot to see the type of water source and capacity.';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.';
+            linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.  Click on map icons to see more information, e. g.  click a blue dot to see the type of water source and capacity.';
         }
 
         titleElement.appendChild(linkElement);
         return titleElement;
     })(),
-    target: 'bottom-right-container'
+    target: 'top-left-container'
 });
 map.addControl(Abstract);
 
