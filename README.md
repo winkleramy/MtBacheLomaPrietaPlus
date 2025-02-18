@@ -2,6 +2,9 @@
 
 Jump right in and [*explore our latest community map*](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)!
 
+Interactive Embedded Community Map:
+<iframe src="map.html" height="400"></iframe>
+
 Or select a topic below:
 1. [Status](#status)
 2. [Workflow](#workflow)

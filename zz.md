@@ -1,9 +1,7 @@
 # Interactive Map of Mt Bache Loma Prieta Plus Community
 
-Embedded Map:
-
 <iframe src="map.html" height="800" width="800"></iframe>
 
-Map in full view extent:
+To see in new window, click [here](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)
 
-Click [here](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)
+
