@@ -88,7 +88,7 @@ In the export window, select the following options:
 
 ### Share with CAL FIRE 
 
-The map coordinator (me) zips the ESRI shape files, [here](src/Layers), and emails them to Frank Rodgers, CAL FIRE Fire Captain - Pre-Fire Engineering, San Mateo-Santa Cruz Unit.
+The map coordinator (me) zips the [ESRI shape files](src/Layers), and emails them to Frank Rodgers, CAL FIRE Fire Captain - Pre-Fire Engineering, San Mateo-Santa Cruz Unit.
 
 ## Resources
 
