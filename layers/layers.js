@@ -122,7 +122,7 @@ lyr_CommunityBoundary_2.set('fieldLabels', {});
 lyr_FirewiseSignLocations_3.set('fieldLabels', {'name': 'no label', });
 lyr_RefugeAreas_4.set('fieldLabels', {'describe': 'inline label - visible with data', 'Address': 'inline label - visible with data', });
 lyr_EmergencyVehicleTurnArounds_5.set('fieldLabels', {'address': 'inline label - visible with data', 'describe': 'inline label - visible with data', });
-lyr_WaterSources_6.set('fieldLabels', {'type': 'inline label - visible with data', 'gallons': 'inline label - visible with data', 'material': 'inline label - visible with data', 'source': 'inline label - visible with data', 'address': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', });
+lyr_WaterSources_6.set('fieldLabels', {'type': 'inline label - visible with data', 'gallons': 'inline label - visible with data', 'material': 'inline label - visible with data', 'source': 'no label', 'address': 'no label', 'Latitude': 'no label', 'Longitude': 'no label', });
 lyr_WaterSources_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
