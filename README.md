@@ -73,7 +73,7 @@ In the export window, select the following options:
 <!-- <img src="Resources/Mount Bache Neighborhood Subgroups.png" alt="Mount Bache Neighborhood Subgroups" width="800"> -->
 <img src="screenshots/LayersandGroups.png" alt="Export Settings" width="800">
 
-- Appearance: Title 'upper left', Abstract 'lower right', Layers list 'Expanded' (creates legend at the top right)
+- Appearance: Title 'upper left', Abstract 'lower right', Layers list 'Expanded' (creates legend at the top right), Template: 'full-screen' (adjusts map size to viewing screen)
 - Select OpenLayers radio button at the bottom and then click Export
 
 <!-- <img src="Resources/Mount Bache Neighborhood Subgroups.png" alt="Mount Bache Neighborhood Subgroups" width="800"> -->
