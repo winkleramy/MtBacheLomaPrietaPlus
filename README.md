@@ -52,7 +52,7 @@ Some tips from CAL FIRE and the Fire Safe Council for water sources:
 The current workflow leverages the open source software [QGIS](https://www.qgis.org) and assessor parcel data from Santa Cruz County's [GISWeb](https://gis.santacruzcounty.us/gisweb/). Community participants share information about relevant features on their properties. The map coordinator (me) then marks the position of relevant features on the assessor parcel map within QGIS, enters any relevant metadata, and exports to html using the qgis2web plugin. The exported files are then pushed to the main branch of this repository and automatically published to GitHub Pages. This workflow with QGIS, qgis2web, and github follows this [example](https://gispofinland.medium.com/why-you-should-use-qgis2web-plugin-github-pages-to-produce-interactive-maps-3d057069d8a1).
 
 ### Add or Edit Map Features
-To edit, pull this repository or download the contents of the [src folder](src). Using QGIS 3.40 or later, open the file MtBacheLomaPrietaPlus.qgz. Right click on the CommunityBoundary layer and select 'Zoom to Layer'. 
+To edit, pull this repository or download the contents of the [src folder](https://github.com/winkleramy/MtBacheLomaPrietaPlus/tree/main/src). Using QGIS 3.40 or later, open the file MtBacheLomaPrietaPlus.qgz. Right click on the CommunityBoundary layer and select 'Zoom to Layer'. 
 
 Identify relevant map features in the appropriate vector layer. Vector layers include WaterSources, EmergencyVehicleTurnArounds, etc. To confirm the latitude/longitude of point features, select the Vertex Tool, available in the Digitizing Toolbar at the top. 
 
@@ -88,7 +88,7 @@ In the export window, select the following options:
 
 ### Share with CAL FIRE 
 
-The map coordinator (me) zips the [ESRI shape files](src/Layers), and emails them to Frank Rodgers, CAL FIRE Fire Captain - Pre-Fire Engineering, San Mateo-Santa Cruz Unit.
+The map coordinator (me) zips the [ESRI shape files](https://github.com/winkleramy/MtBacheLomaPrietaPlus/tree/main/src/Layers), and emails them to Frank Rodgers, CAL FIRE Fire Captain - Pre-Fire Engineering, San Mateo-Santa Cruz Unit.
 
 ## Resources
 
