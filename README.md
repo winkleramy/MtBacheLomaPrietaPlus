@@ -98,7 +98,3 @@ The map coordinator (me) zips the [ESRI shape files](https://github.com/winklera
 - [GISWeb](https://gis.santacruzcounty.us/gisweb/)
 - [Download QGIS](https://www.qgis.org)
 - [QGIS GitHub Publishing Example](https://gispofinland.medium.com/why-you-should-use-qgis2web-plugin-github-pages-to-produce-interactive-maps-3d057069d8a1)
-
-## Debug Section
-
-<iframe class="pdf" data="https://github.com/winkleramy/Firewise/blob/main/Updates/Update%202025%20Q1.pdf" width="800" height="500"></iframe>
