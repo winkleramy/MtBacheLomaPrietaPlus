@@ -1,4 +1,4 @@
-Community Map Project
+# Community Map Project
 
 [Return to Home Page](https://winkleramy.github.io/Firewise/)
 
