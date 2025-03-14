@@ -1,4 +1,6 @@
-# Mt Bache Loma Prieta Plus Firewise Community Map Project
+Community Map Project
+
+[Return to Home Page](https://winkleramy.github.io/Firewise/)
 
 Explore our interactive [*Mt Bache Loma Prieta Plus Community Map*](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)
 
