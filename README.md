@@ -1,8 +1,10 @@
 # Mt Bache Loma Prieta Plus Firewise Community Map Project
 
-Jump right in and [*explore our latest community map*](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)!
+Explore our interactive [*Mt Bache Loma Prieta Plus Community Map*](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)
 
-Or select a topic below:
+We are actively working on mapping key wildfire resources in our community to share with CAL FIRE, such as water sources, emergency vehicle turnarounds, and temporary refuge areas. Please contact me at [winkleramy@gmail.com](mailto:winkleramy@gmail.com?subject=Community%20Map%20Project) to participate in this project.
+
+Select a topic below to learn more:
 1. [Status](#status)
 2. [Contribute](#be-a-contributor)
 3. [Workflow](#workflow)
