@@ -50,6 +50,8 @@ Some tips from CAL FIRE and the Fire Safe Council for water sources:
 - Debris, which may flow from the hydrant system and clog an attached fire hose. This is a big concern among firefighters! In many instances, firefighters forego using private hydrants to avoid possible damage to their hoses. 
 - Flow Rate, which should match the color of the hydrant. If the hydrant hasn’t been tested recently, the rated flow cannot be trusted.
 
+For emergency vehicle access, Fire Prevention Standard [FPO-012](https://countyfire.santacruzcountyca.gov/Portals/36/sccfire/FireResources/FirePrevention/fpo_012_max_grade_vert_clearance.pdf) states that a minimum of 13' 6" vertical clearance over a road or driveway is needed. Per the Santa Cruz County Health and Safety Code [§7.92.503.2.1.1](https://www.codepublishing.com/CA/SantaCruzCounty/#!/SantaCruzCounty07/SantaCruzCounty0792.html%237.92.503.2.1.1), areas within 10' horizontal and 15' vertical on each side of roads and driveways shall be cleared of flammable vegetation and other combustible growth. Single specimens of trees or cultivated ground cover such as green grass, ivy, succulents, or similar plants are exempt provided they do not form a means of readily transmitting fire at the discretion of the fire code official. Please keep these standards in mind when identifying or preparing for emergency vehicle access to your property.
+
 
 ## Workflow 
 
