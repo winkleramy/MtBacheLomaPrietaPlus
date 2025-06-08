@@ -7,7 +7,8 @@ var style_WaterSources_5 = function(feature, resolution){
         variables: {}
     };
     
-    var labelText = ""; var value = feature.get("");
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "13.0px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "";

@@ -90,17 +90,17 @@ var lyr_WaterSources_5 = new ol.layer.Vector({
 
 lyr_OpenStreetMap_0.setVisible(true);lyr_AssessorParcels_1.setVisible(true);lyr_CommunityBoundary_2.setVisible(true);lyr_RefugeAreas_3.setVisible(true);lyr_EmergencyVehicleTurnArounds_4.setVisible(true);lyr_WaterSources_5.setVisible(true);
 var layersList = [lyr_OpenStreetMap_0,lyr_AssessorParcels_1,lyr_CommunityBoundary_2,lyr_RefugeAreas_3,lyr_EmergencyVehicleTurnArounds_4,lyr_WaterSources_5];
-lyr_AssessorParcels_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'APN': 'APN', 'SITEADD': 'SITEADD', 'SITEADD2': 'SITEADD2', 'ACRES': 'ACRES', });
+lyr_AssessorParcels_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'APN': 'APN', 'APNNODASH': 'APNNODASH', 'SITEADD': 'SITEADD', 'SITEADD2': 'SITEADD2', 'ACRES': 'ACRES', });
 lyr_CommunityBoundary_2.set('fieldAliases', {'id': 'id', 'name': 'name', });
 lyr_RefugeAreas_3.set('fieldAliases', {'id': 'id', 'describe': 'describe', 'Address': 'Address', });
 lyr_EmergencyVehicleTurnArounds_4.set('fieldAliases', {'id': 'id', 'address': 'address', 'describe': 'describe', });
 lyr_WaterSources_5.set('fieldAliases', {'id': 'id', 'type': 'type', 'gallons': 'gallons', 'material': 'material', 'source': 'source', 'address': 'address', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Notes': 'Notes', });
-lyr_AssessorParcels_1.set('fieldImages', {'OBJECTID': 'TextEdit', 'APN': 'TextEdit', 'SITEADD': 'TextEdit', 'SITEADD2': 'TextEdit', 'ACRES': 'TextEdit', });
+lyr_AssessorParcels_1.set('fieldImages', {'OBJECTID': 'TextEdit', 'APN': 'TextEdit', 'APNNODASH': 'TextEdit', 'SITEADD': 'TextEdit', 'SITEADD2': 'TextEdit', 'ACRES': 'TextEdit', });
 lyr_CommunityBoundary_2.set('fieldImages', {'id': 'Hidden', 'name': 'Hidden', });
 lyr_RefugeAreas_3.set('fieldImages', {'id': 'Hidden', 'describe': 'TextEdit', 'Address': 'TextEdit', });
 lyr_EmergencyVehicleTurnArounds_4.set('fieldImages', {'id': 'Hidden', 'address': 'TextEdit', 'describe': 'TextEdit', });
 lyr_WaterSources_5.set('fieldImages', {'id': 'Hidden', 'type': 'TextEdit', 'gallons': 'TextEdit', 'material': 'TextEdit', 'source': 'TextEdit', 'address': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Notes': '', });
-lyr_AssessorParcels_1.set('fieldLabels', {'OBJECTID': 'inline label - visible with data', 'APN': 'inline label - visible with data', 'SITEADD': 'inline label - visible with data', 'SITEADD2': 'inline label - visible with data', 'ACRES': 'inline label - visible with data', });
+lyr_AssessorParcels_1.set('fieldLabels', {'OBJECTID': 'inline label - visible with data', 'APN': 'inline label - visible with data', 'APNNODASH': 'inline label - visible with data', 'SITEADD': 'inline label - visible with data', 'SITEADD2': 'inline label - visible with data', 'ACRES': 'inline label - visible with data', });
 lyr_CommunityBoundary_2.set('fieldLabels', {});
 lyr_RefugeAreas_3.set('fieldLabels', {'describe': 'inline label - visible with data', 'Address': 'inline label - visible with data', });
 lyr_EmergencyVehicleTurnArounds_4.set('fieldLabels', {'address': 'inline label - visible with data', 'describe': 'inline label - visible with data', });
