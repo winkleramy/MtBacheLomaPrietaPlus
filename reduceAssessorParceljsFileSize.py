@@ -51,3 +51,8 @@ with open(file_path, "w") as f:
 file_path = 'layers/AssessorParcels_1.js'
 with open(file_path, "w") as f:
     f.write("var json_AssessorParcels_1 = " + str(jsonObj))
+
+
+# FYI, to redirect from map.html to another site, simply add this line in the header:
+# <meta http-equiv="refresh" content="0; url=http://example.com/" />
+# Source: https://stackoverflow.com/questions/5411538/how-to-redirect-one-html-page-to-another-on-load
