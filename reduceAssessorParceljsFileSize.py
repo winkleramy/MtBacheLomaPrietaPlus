@@ -34,6 +34,20 @@ jsonObj['features'] = [feature for feature in jsonObj['features'] if 'MT BACHE' 
 with open(file_path, "w") as f:
     json.dump(jsonObj, f) """
 
+# offsetX = -0.0006
+# offsetY = 0.0002
+
+# featureCount = 0
+# for feature in jsonObj['features']:
+#     coordinateCount = 0
+#     for coordinate in feature['geometry']['coordinates'][0][0]:
+#         coordinate[0] = coordinate[0]+offsetX
+#         coordinate[1] = coordinate[1]+offsetY
+#         feature['geometry']['coordinates'][0][0][coordinateCount] = coordinate
+#         coordinateCount = coordinateCount+1
+#     jsonObj['features'][featureCount] = feature
+#     featureCount = featureCount+1
+
 file_path = 'layers/AssessorParcels_1.js'
 with open(file_path, "w") as f:
     f.write("var json_AssessorParcels_1 = " + str(jsonObj))
