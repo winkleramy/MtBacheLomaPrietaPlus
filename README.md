@@ -89,7 +89,7 @@ In the export window, select the following options:
 - Change 'index.html' to 'map.html'
 - Run [reduceAssessorParceljsFileSize.py](reduceAssessorParceljsFileSize.py) in order to upload AssessorParcel_1.js file without git-lfs tool (which is not compatible with GitHub Pages html viewer)
 - Modify transparency of Community Boundary and Refuge Areas by navigating to [styles](https://github.com/winkleramy/MtBacheLomaPrietaPlus/tree/main/styles), opening each js file, and editing
--- ol.style.Fill({color: 'rgba(166,206,227,1.0)'}) --> ol.style.Fill({color: 'rgba(166,206,227,0.5)'})
+-- ol.style.Fill({color: 'rgba(166,206,227,1.0)'}) --> ol.style.Fill({color: 'rgba(166,206,227,0.2)'})
 - Modify lineDash of Emergency Vehicle Turnarounds by navigating to [styles](https://github.com/winkleramy/MtBacheLomaPrietaPlus/tree/main/styles), opening the js file, and editing
 -- ol.style.Stroke({color: 'rgba(219,30,42,1.0)', lineDash: null, ...}) --> ol.style.Stroke({color: 'rgba(219,30,42,1.0)', lineDash: [0.1,5], ...})
 - Push to GitHub
