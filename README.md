@@ -4,7 +4,7 @@
 
 Explore our interactive [*Mt Bache Loma Prieta Plus Community Map*](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)
 
-We are actively working on mapping key wildfire resources in our community to share with CAL FIRE, such as water sources, emergency vehicle turnarounds, and temporary refuge areas. Please contact me at [winkleramy@gmail.com](mailto:winkleramy@gmail.com?subject=Community%20Map%20Project) to participate in this project.
+We are actively working on mapping key wildfire resources in our community to share with CAL FIRE, such as water sources, emergency vehicle turnarounds, and temporary refuge areas. Please contact our steering committee at [firewise@mtbacheloma.org](mailto:firewise@mtbacheloma.org?subject=Community%20Map%20Project) to participate in this project.
 
 Select a topic below to learn more:
 1. [Status](#status)
@@ -28,7 +28,7 @@ We are sharing this information with CAL FIRE to reference in case of a wildfire
 
 ## Be a Contributor!
 
-We would like this map to be as representative of our community as possible! To share information about water sources, emergency vehicle turn-arounds, or other helpful resources on your property for CAL FIRE in case of a wildfire event, please contact to me at [winkleramy@gmail.com](mailto:winkleramy@gmail.com?subject=Community%20Map%20Project). 
+We would like this map to be as representative of our community as possible! To share information about water sources, emergency vehicle turn-arounds, or other helpful resources on your property for CAL FIRE in case of a wildfire event, please contact our steering committee at [firewise@mtbacheloma.org](mailto:firewise@mtbacheloma.org?subject=Community%20Map%20Project). 
 
 For water sources, please include the following information: 
 - Property Address
