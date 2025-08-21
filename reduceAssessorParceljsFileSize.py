@@ -52,20 +52,20 @@ file_path = 'layers/AssessorParcels_1.js'
 with open(file_path, "w") as f:
     f.write("var json_AssessorParcels_1 = " + str(jsonObj))
 
-# Remove water sources not for public disclosure
-with open('layers/WaterSources_5.js') as dataFile:
+""" # Remove water sources not for public disclosure
+with open('layers/EmergencyWaterSources_5.js') as dataFile:
     data = dataFile.read()
     obj = data[data.find('{') : data.rfind('}')+1]
     jsonObj = json.loads(obj)
 
-shutil.move('layers/WaterSources_5.js', 'deleteme')
+shutil.move('layers/EmergencyWaterSources_5.js', 'deleteme')
 
 jsonObj['features'] = [feature for feature in jsonObj['features'] if feature['properties']['MakePublic'] == 1]
 
 file_path = 'layers/WaterSources_5.js'
 with open(file_path, "w") as f:
     f.write("var json_WaterSources_5 = " + str(jsonObj).replace('None','null'))
-
+ """
 # FYI, to redirect from map.html to another site, simply add this line in the header:
 # <meta http-equiv="refresh" content="0; url=http://example.com/" />
 # Source: https://stackoverflow.com/questions/5411538/how-to-redirect-one-html-page-to-another-on-load

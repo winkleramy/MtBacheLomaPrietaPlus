@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-13569933.212612, 4451844.474125, -13566502.670359, 4454423.421639], map.getSize());
+map.getView().fit([-13570007.077868, 4451946.273044, -13566428.805103, 4454321.598868], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -466,7 +466,7 @@ var Abstract = new ol.control.Control({
 
         var linkElement = document.createElement('a');
 
-        if (300 > 240) {
+        if (301 > 240) {
             linkElement.setAttribute("onmouseenter", "showAbstract()");
             linkElement.setAttribute("onmouseleave", "hideAbstract()");
             linkElement.innerHTML = 'i';
@@ -480,13 +480,13 @@ var Abstract = new ol.control.Control({
             window.showAbstract = function() {
                 linkElement.classList.remove("project-abstract");
                 linkElement.classList.add("project-abstract-uncollapsed");
-                linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.  Click on map icons to see more information, e. g.  click a blue dot to see the type of water source and capacity.';
+                linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.  Click on map icons to see more information, e. g.  click a blue dot to see the type of water source and capacity. ';
             }
 
             hideAbstract();
         } else {
             linkElement.classList.add("project-abstract-uncollapsed");
-            linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.  Click on map icons to see more information, e. g.  click a blue dot to see the type of water source and capacity.';
+            linkElement.innerHTML = 'Mt Bache Loma Prieta Plus is a recognized Firewise Community in the Santa Cruz Mountains.  Our map contains layers relevant to residents and emergency personnel during a wildfire event.  Click on map icons to see more information, e. g.  click a blue dot to see the type of water source and capacity. ';
         }
 
         titleElement.appendChild(linkElement);
@@ -502,62 +502,42 @@ map.addControl(Abstract);
 
 
 //measurement
+let measuring = false;
 
-var measuring = false;
-var measureControl = (function (Control) {
-    measureControl = function(opt_options) {
+	const measureButton = document.createElement('button');
+	measureButton.className = 'measure-button fas fa-ruler';
+	measureButton.title = 'Measure';
 
-      var options = opt_options || {};
+	const measureControl = document.createElement('div');
+	measureControl.className = 'ol-unselectable ol-control measure-control';
+	measureControl.appendChild(measureButton);
+	map.getTargetElement().appendChild(measureControl);
 
-      var measurebutton = document.createElement('button');
-      measurebutton.className += ' fas fa-ruler ';
+	// Event handler
+	function handleMeasure() {
+	  if (!measuring) {
+		selectLabel.style.display = "";
+		map.addInteraction(draw);
+		createHelpTooltip();
+		createMeasureTooltip();
+		measuring = true;
+	  } else {
+		selectLabel.style.display = "none";
+		map.removeInteraction(draw);
+		map.removeOverlay(helpTooltip);
+		map.removeOverlay(measureTooltip);
+		const staticTooltips = document.getElementsByClassName("tooltip-static");
+		while (staticTooltips.length > 0) {
+		  staticTooltips[0].parentNode.removeChild(staticTooltips[0]);
+		}
+		measureLayer.getSource().clear();
+		sketch = null;
+		measuring = false;
+	  }
+	}
 
-      var this_ = this;
-      var handleMeasure = function(e) {
-        if (!measuring) {
-            selectLabel.style.display = "";
-            this_.getMap().addInteraction(draw);
-            createHelpTooltip();
-            createMeasureTooltip();
-            measuring = true;
-        } else {
-            selectLabel.style.display = "none";
-            this_.getMap().removeInteraction(draw);
-            measuring = false;
-            this_.getMap().removeOverlay(helpTooltip);
-            this_.getMap().removeOverlay(measureTooltip);
-            var staticTooltip = document.getElementsByClassName("tooltip-static");
-                while (staticTooltip.length > 0) {
-                  staticTooltip[0].parentNode.removeChild(staticTooltip[0]);
-                }
-            measureLayer.getSource().clear();
-            sketch = null;
-        }
-      };
-
-      measurebutton.addEventListener('click', handleMeasure, false);
-      measurebutton.addEventListener('touchstart', handleMeasure, false);
-
-      measurebutton.addEventListener("click", () => {
-          measurebutton.classList.toggle("clicked");
-        });
-
-      var element = document.createElement('div');
-      element.className = 'measure-control ol-unselectable ol-control';
-      element.appendChild(measurebutton);
-
-      ol.control.Control.call(this, {
-        element: element,
-        target: options.target
-      });
-
-    };
-    if (Control) measureControl.__proto__ = Control;
-    measureControl.prototype = Object.create(Control && Control.prototype);
-    measureControl.prototype.constructor = measureControl;
-    return measureControl;
-    }(ol.control.Control));
-    map.addControl(new measureControl())
+	measureButton.addEventListener('click', handleMeasure);
+	measureButton.addEventListener('touchstart', handleMeasure);
 
     map.on('pointermove', function(evt) {
         if (evt.dragging) {
@@ -580,8 +560,6 @@ var measureControl = (function (Control) {
     });
     
 
-    var measureControl = document.querySelector(".measure-control");
-
     var selectLabel = document.createElement("label");
     selectLabel.innerHTML = "&nbsp;Measure:&nbsp;";
 
@@ -603,291 +581,291 @@ var measureControl = (function (Control) {
     measureControl.appendChild(selectLabel);
 
     selectLabel.style.display = "none";
-/**
- * Currently drawn feature.
- * @type {ol.Feature}
- */
+	/**
+	 * Currently drawn feature.
+	 * @type {ol.Feature}
+	 */
 
-/**
- * The help tooltip element.
- * @type {Element}
- */
-var helpTooltipElement;
-
-
-/**
- * Overlay to show the help messages.
- * @type {ol.Overlay}
- */
-var helpTooltip;
+	/**
+	 * The help tooltip element.
+	 * @type {Element}
+	 */
+	var helpTooltipElement;
 
 
-/**
- * The measure tooltip element.
- * @type {Element}
- */
-var measureTooltipElement;
+	/**
+	 * Overlay to show the help messages.
+	 * @type {ol.Overlay}
+	 */
+	var helpTooltip;
 
 
-/**
- * Overlay to show the measurement.
- * @type {ol.Overlay}
- */
-var measureTooltip;
+	/**
+	 * The measure tooltip element.
+	 * @type {Element}
+	 */
+	var measureTooltipElement;
 
 
-/**
- * Message to show when the user is drawing a line.
- * @type {string}
- */
-var continueLineMsg = 'Click to continue drawing the line';
+	/**
+	 * Overlay to show the measurement.
+	 * @type {ol.Overlay}
+	 */
+	var measureTooltip;
+
+
+	/**
+	 * Message to show when the user is drawing a line.
+	 * @type {string}
+	 */
+	var continueLineMsg = 'Click to continue drawing the line';
 
 
 
-/**
- * Message to show when the user is drawing a polygon.
- * @type {string}
- */
-var continuePolygonMsg = "1click continue, 2click close";
+	/**
+	 * Message to show when the user is drawing a polygon.
+	 * @type {string}
+	 */
+	var continuePolygonMsg = "1click continue, 2click close";
 
 
-var typeSelect = document.getElementById("type");
-var typeSelectForm = document.getElementById("form_measure");
+	var typeSelect = document.getElementById("type");
+	var typeSelectForm = document.getElementById("form_measure");
 
-typeSelect.onchange = function (e) {		  
-  map.removeInteraction(draw);
-  addInteraction();
-  map.addInteraction(draw);		  
-};
+	typeSelect.onchange = function (e) {		  
+	  map.removeInteraction(draw);
+	  addInteraction();
+	  map.addInteraction(draw);		  
+	};
 
-var measureLineStyle = new ol.style.Style({
-  stroke: new ol.style.Stroke({ 
-	color: "rgba(0, 0, 255)", //blu
-	lineDash: [10, 10],
-	width: 4
-  }),
-  image: new ol.style.Circle({
-	radius: 6,
-	stroke: new ol.style.Stroke({
-	  color: "rgba(255, 255, 255)", 
-	  width: 1
-	}),
-  })
-});
-
-var measureLineStyle2 = new ol.style.Style({	  
-	stroke: new ol.style.Stroke({
-		color: "rgba(255, 255, 255)", 
+	var measureLineStyle = new ol.style.Style({
+	  stroke: new ol.style.Stroke({ 
+		color: "rgba(0, 0, 255)", //blu
 		lineDash: [10, 10],
-		width: 2
+		width: 4
 	  }),
-  image: new ol.style.Circle({
-	radius: 5,
-	stroke: new ol.style.Stroke({
-	  color: "rgba(0, 0, 255)", 
-	  width: 1
-	}),
-		  fill: new ol.style.Fill({
-	  color: "rgba(255, 204, 51, 0.4)", 
-	}),
+	  image: new ol.style.Circle({
+		radius: 6,
+		stroke: new ol.style.Stroke({
+		  color: "rgba(255, 255, 255)", 
+		  width: 1
+		}),
 	  })
-});
-
-var labelStyle = new ol.style.Style({
-  text: new ol.style.Text({
-	font: "14px Calibri,sans-serif",
-	fill: new ol.style.Fill({
-	  color: "rgba(0, 0, 0, 1)"
-	}),
-	stroke: new ol.style.Stroke({
-	  color: "rgba(255, 255, 255, 1)",
-	  width: 3
-	})
-  })
-});
-
-var labelStyleCache = [];
-
-var styleFunction = function (feature, type) {
-  var styles = [measureLineStyle, measureLineStyle2];
-  var geometry = feature.getGeometry();
-  var type = geometry.getType();
-  var lineString;
-  if (!type || type === type) {
-	if (type === "Polygon") {
-	  lineString = new ol.geom.LineString(geometry.getCoordinates()[0]);
-	} else if (type === "LineString") {
-	  lineString = geometry;
-	}
-  }
-  if (lineString) {
-	var count = 0;
-	lineString.forEachSegment(function (a, b) {
-	  var segment = new ol.geom.LineString([a, b]);
-	  var label = formatLength(segment);
-	  if (labelStyleCache.length - 1 < count) {
-		labelStyleCache.push(labelStyle.clone());
-	  }
-	  labelStyleCache[count].setGeometry(segment);
-	  labelStyleCache[count].getText().setText(label);
-	  styles.push(labelStyleCache[count]);
-	  count++;
 	});
-  }
-  return styles;
-};
-var source = new ol.source.Vector();
 
-var measureLayer = new ol.layer.Vector({
-  source: source,
-  displayInLayerSwitcher: false,
-  style: function (feature) {
-	labelStyleCache = [];
-	return styleFunction(feature);
-  }
-});
+	var measureLineStyle2 = new ol.style.Style({	  
+		stroke: new ol.style.Stroke({
+			color: "rgba(255, 255, 255)", 
+			lineDash: [10, 10],
+			width: 2
+		  }),
+	  image: new ol.style.Circle({
+		radius: 5,
+		stroke: new ol.style.Stroke({
+		  color: "rgba(0, 0, 255)", 
+		  width: 1
+		}),
+			  fill: new ol.style.Fill({
+		  color: "rgba(255, 204, 51, 0.4)", 
+		}),
+		  })
+	});
 
-map.addLayer(measureLayer);
+	var labelStyle = new ol.style.Style({
+	  text: new ol.style.Text({
+		font: "14px Calibri,sans-serif",
+		fill: new ol.style.Fill({
+		  color: "rgba(0, 0, 0, 1)"
+		}),
+		stroke: new ol.style.Stroke({
+		  color: "rgba(255, 255, 255, 1)",
+		  width: 3
+		})
+	  })
+	});
 
-var draw; // global so we can remove it later
-function addInteraction() {
-  var type = typeSelect.value;
-  draw = new ol.interaction.Draw({
-    source: source,
-    type: /** @type {ol.geom.GeometryType} */ (type),
-	style: function (feature) {
-			  return styleFunction(feature, type);
-			}
-  });
+	var labelStyleCache = [];
 
-  var listener;
-  draw.on('drawstart',
-      function(evt) {
-        // set sketch
-        sketch = evt.feature;
+	var styleFunction = function (feature, type) {
+	  var styles = [measureLineStyle, measureLineStyle2];
+	  var geometry = feature.getGeometry();
+	  var type = geometry.getType();
+	  var lineString;
+	  if (!type || type === type) {
+		if (type === "Polygon") {
+		  lineString = new ol.geom.LineString(geometry.getCoordinates()[0]);
+		} else if (type === "LineString") {
+		  lineString = geometry;
+		}
+	  }
+	  if (lineString) {
+		var count = 0;
+		lineString.forEachSegment(function (a, b) {
+		  var segment = new ol.geom.LineString([a, b]);
+		  var label = formatLength(segment);
+		  if (labelStyleCache.length - 1 < count) {
+			labelStyleCache.push(labelStyle.clone());
+		  }
+		  labelStyleCache[count].setGeometry(segment);
+		  labelStyleCache[count].getText().setText(label);
+		  styles.push(labelStyleCache[count]);
+		  count++;
+		});
+	  }
+	  return styles;
+	};
+	var source = new ol.source.Vector();
 
-        /** @type {ol.Coordinate|undefined} */
-        var tooltipCoord = evt.coordinate;
+	var measureLayer = new ol.layer.Vector({
+	  source: source,
+	  displayInLayerSwitcher: false,
+	  style: function (feature) {
+		labelStyleCache = [];
+		return styleFunction(feature);
+	  }
+	});
 
-        listener = sketch.getGeometry().on('change', function(evt) {
-          var geom = evt.target;
-          var output;
-          if (geom instanceof ol.geom.Polygon) {
-				  output = formatArea(/** @type {ol.geom.Polygon} */ (geom));
-				  tooltipCoord = geom.getInteriorPoint().getCoordinates();
-				} else if (geom instanceof ol.geom.LineString) {
-				  output = formatLength(/** @type {ol.geom.LineString} */ (geom));
-				  tooltipCoord = geom.getLastCoordinate();
+	map.addLayer(measureLayer);
+
+	var draw; // global so we can remove it later
+	function addInteraction() {
+	  var type = typeSelect.value;
+	  draw = new ol.interaction.Draw({
+		source: source,
+		type: /** @type {ol.geom.GeometryType} */ (type),
+		style: function (feature) {
+				  return styleFunction(feature, type);
 				}
-          measureTooltipElement.innerHTML = output;
-          measureTooltip.setPosition(tooltipCoord);
-        });
-      }, this);
+	  });
 
-  draw.on('drawend',
-      function(evt) {
-        measureTooltipElement.className = 'tooltip tooltip-static';
-        measureTooltip.setOffset([0, -7]);
-        // unset sketch
-        sketch = null;
-        // unset tooltip so that a new one can be created
-        measureTooltipElement = null;
-        createMeasureTooltip();
-        ol.Observable.unByKey(listener);
-      }, this);
-}
+	  var listener;
+	  draw.on('drawstart',
+		  function(evt) {
+			// set sketch
+			sketch = evt.feature;
 
+			/** @type {ol.Coordinate|undefined} */
+			var tooltipCoord = evt.coordinate;
 
-/**
- * Creates a new help tooltip
- */
-function createHelpTooltip() {
-  if (helpTooltipElement) {
-    helpTooltipElement.parentNode.removeChild(helpTooltipElement);
-  }
-  helpTooltipElement = document.createElement('div');
-  helpTooltipElement.className = 'tooltip hidden';
-  helpTooltip = new ol.Overlay({
-    element: helpTooltipElement,
-    offset: [15, 0],
-    positioning: 'center-left'
-  });
-  map.addOverlay(helpTooltip);
-}
+			listener = sketch.getGeometry().on('change', function(evt) {
+			  var geom = evt.target;
+			  var output;
+			  if (geom instanceof ol.geom.Polygon) {
+					  output = formatArea(/** @type {ol.geom.Polygon} */ (geom));
+					  tooltipCoord = geom.getInteriorPoint().getCoordinates();
+					} else if (geom instanceof ol.geom.LineString) {
+					  output = formatLength(/** @type {ol.geom.LineString} */ (geom));
+					  tooltipCoord = geom.getLastCoordinate();
+					}
+			  measureTooltipElement.innerHTML = output;
+			  measureTooltip.setPosition(tooltipCoord);
+			});
+		  }, this);
 
-
-/**
- * Creates a new measure tooltip
- */
-function createMeasureTooltip() {
-  if (measureTooltipElement) {
-    measureTooltipElement.parentNode.removeChild(measureTooltipElement);
-  }
-  measureTooltipElement = document.createElement('div');
-  measureTooltipElement.className = 'tooltip tooltip-measure';
-  measureTooltip = new ol.Overlay({
-    element: measureTooltipElement,
-    offset: [0, -15],
-    positioning: 'bottom-center'
-  });
-  map.addOverlay(measureTooltip);
-}
+	  draw.on('drawend',
+		  function(evt) {
+			measureTooltipElement.className = 'tooltip tooltip-static';
+			measureTooltip.setOffset([0, -7]);
+			// unset sketch
+			sketch = null;
+			// unset tooltip so that a new one can be created
+			measureTooltipElement = null;
+			createMeasureTooltip();
+			ol.Observable.unByKey(listener);
+		  }, this);
+	}
 
 
-function convertToFeet(length) {
+	/**
+	 * Creates a new help tooltip
+	 */
+	function createHelpTooltip() {
+	  if (helpTooltipElement) {
+		helpTooltipElement.parentNode.removeChild(helpTooltipElement);
+	  }
+	  helpTooltipElement = document.createElement('div');
+	  helpTooltipElement.className = 'tooltip hidden';
+	  helpTooltip = new ol.Overlay({
+		element: helpTooltipElement,
+		offset: [15, 0],
+		positioning: 'center-left'
+	  });
+	  map.addOverlay(helpTooltip);
+	}
+
+
+	/**
+	 * Creates a new measure tooltip
+	 */
+	function createMeasureTooltip() {
+	  if (measureTooltipElement) {
+		measureTooltipElement.parentNode.removeChild(measureTooltipElement);
+	  }
+	  measureTooltipElement = document.createElement('div');
+	  measureTooltipElement.className = 'tooltip tooltip-measure';
+	  measureTooltip = new ol.Overlay({
+		element: measureTooltipElement,
+		offset: [0, -15],
+		positioning: 'bottom-center'
+	  });
+	  map.addOverlay(measureTooltip);
+	}
+
+
+  function convertToFeet(length) {
     feet_length = length * 3.2808;
     return feet_length
-}
+  }
 
-/**
- * format length output
- * @param {ol.geom.LineString} line
- * @return {string}
- */
-var formatLength = function(line) {
-  var length;
-  var coordinates = line.getCoordinates();
-  length = 0;
-  var sourceProj = map.getView().getProjection();
-  for (var i = 0, ii = coordinates.length - 1; i < ii; ++i) {
-      var c1 = ol.proj.transform(coordinates[i], sourceProj, 'EPSG:4326');
-      var c2 = ol.proj.transform(coordinates[i + 1], sourceProj, 'EPSG:4326');
-      length += ol.sphere.getDistance(c1, c2);
-    }
-    feet_length = convertToFeet(length)
+  /**
+  * format length output
+  * @param {ol.geom.LineString} line
+  * @return {string}
+  */
+  var formatLength = function(line) {
+    var length;
+    var coordinates = line.getCoordinates();
+    length = 0;
+    var sourceProj = map.getView().getProjection();
+    for (var i = 0, ii = coordinates.length - 1; i < ii; ++i) {
+        var c1 = ol.proj.transform(coordinates[i], sourceProj, 'EPSG:4326');
+        var c2 = ol.proj.transform(coordinates[i + 1], sourceProj, 'EPSG:4326');
+        length += ol.sphere.getDistance(c1, c2);
+      }
+      feet_length = convertToFeet(length)
 
+      var output;
+      if (feet_length > 5280) {
+          output = (Math.round(feet_length / 5280 * 100) / 100) + ' miles';
+      } else {
+          output = (Math.round(feet_length * 100) / 100) + ' ft';
+      }
+      return output;
+  };
+
+  /**
+  * Format area output.
+  * @param {ol.geom.Polygon} polygon The polygon.
+  * @return {string} Formatted area.
+  */
+  var formatArea = function (polygon) {
+    var area = polygon.getArea();
     var output;
-    if (feet_length > 5280) {
-        output = (Math.round(feet_length / 5280 * 100) / 100) + ' miles';
+    if (area > 107639) {  // Converte 1 km^2 in piedi quadrati
+      output = (Math.round((area / 107639) * 1000) / 1000) + ' sq mi';
     } else {
-        output = (Math.round(feet_length * 100) / 100) + ' ft';
+      output = (Math.round(area * 10.7639 * 100) / 100) + ' sq ft';
     }
     return output;
-};
+  };
 
-/**
- * Format area output.
- * @param {ol.geom.Polygon} polygon The polygon.
- * @return {string} Formatted area.
- */
-var formatArea = function (polygon) {
-  var area = polygon.getArea();
-  var output;
-  if (area > 107639) {  // Converte 1 km^2 in piedi quadrati
-    output = (Math.round((area / 107639) * 1000) / 1000) + ' sq mi';
-	} else {
-		output = (Math.round(area * 10.7639 * 100) / 100) + ' sq ft';
-	}
-  return output;
-};
+  addInteraction();
 
-addInteraction();
-
-var parentElement = document.querySelector(".measure-control");
-var elementToMove = document.getElementById("form_measure");
-if (elementToMove && parentElement) {
-  parentElement.insertBefore(elementToMove, parentElement.firstChild);
-}
+  var parentElement = document.querySelector(".measure-control");
+  var elementToMove = document.getElementById("form_measure");
+  if (elementToMove && parentElement) {
+    parentElement.insertBefore(elementToMove, parentElement.firstChild);
+  }
 
 
 //geocoder
@@ -898,6 +876,7 @@ if (elementToMove && parentElement) {
 
 //scalebar
 
+map.addControl(new ol.control.ScaleLine({}));
 
 //layerswitcher
 
@@ -972,19 +951,17 @@ document.addEventListener('DOMContentLoaded', function() {
         topLeftContainerDiv.appendChild(zoomControl);
     }
     //geolocate
-    var geolocateControl = document.getElementsByClassName('geolocate')[0];
-    if (geolocateControl) {
+    if (typeof geolocateControl !== 'undefined') {
         topLeftContainerDiv.appendChild(geolocateControl);
     }
     //measure
-    var measureControl = document.getElementsByClassName('measure-control')[0];
-    if (measureControl) {
+    if (typeof measureControl !== 'undefined') {
         topLeftContainerDiv.appendChild(measureControl);
     }
     //geocoder
-    var geocoderControl = document.getElementsByClassName('ol-geocoder')[0];
-    if (geocoderControl) {
-        topLeftContainerDiv.appendChild(geocoderControl);
+    var searchbar = document.getElementsByClassName('photon-geocoder-autocomplete ol-unselectable ol-control')[0];
+    if (searchbar) {
+        topLeftContainerDiv.appendChild(searchbar);
     }
     //search layer
     var searchLayerControl = document.getElementsByClassName('search-layer')[0];
