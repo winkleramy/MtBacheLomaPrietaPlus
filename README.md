@@ -4,7 +4,7 @@
 
 Please consider [contributing](#be-a-contributor) information about your property to enable our emergency responders!
 
-Explore the [Community Map](https://winkleramy.github.io/MtBacheLomaPrietaPlus/map.html)
+Explore the [Community Map](https://winkleramy.github.io/MtBacheLoma/map.html)
 
 <iframe src="map.html" height="600" width="600"></iframe>
 
