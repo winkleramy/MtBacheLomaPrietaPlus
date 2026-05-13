@@ -98,7 +98,7 @@ lyr_EmergencyWaterSources_5.set('fieldAliases', {'id': 'id', 'Type': 'Type', 'Ga
 lyr_AssessorParcels_1.set('fieldImages', {'OBJECTID': 'TextEdit', 'APN': 'TextEdit', 'APNNODASH': 'TextEdit', 'SITEADD': 'TextEdit', 'SITEADD2': 'TextEdit', 'ACRES': 'TextEdit', 'SITEADDNO': 'Range', });
 lyr_CommunityBoundary_2.set('fieldImages', {'id': 'Hidden', 'name': 'Hidden', });
 lyr_RefugeAreas_3.set('fieldImages', {'id': 'Hidden', 'describe': 'TextEdit', 'Address': 'TextEdit', });
-lyr_EmergencyVehicleTurnArounds_4.set('fieldImages', {'id': 'Hidden', 'address': 'TextEdit', 'describe': 'TextEdit', 'Notes': '', });
+lyr_EmergencyVehicleTurnArounds_4.set('fieldImages', {'id': 'Hidden', 'address': 'TextEdit', 'describe': 'TextEdit', 'Notes': 'TextEdit', });
 lyr_EmergencyWaterSources_5.set('fieldImages', {'id': 'TextEdit', 'Type': 'TextEdit', 'Gallons': 'Range', 'Material': 'TextEdit', 'Source': 'TextEdit', 'Address': 'TextEdit', 'Longitude': 'TextEdit', 'Latitude': 'TextEdit', 'Notes': 'TextEdit', 'MakePublic': 'Range', });
 lyr_AssessorParcels_1.set('fieldLabels', {'OBJECTID': 'inline label - visible with data', 'APN': 'inline label - visible with data', 'APNNODASH': 'inline label - visible with data', 'SITEADD': 'inline label - visible with data', 'SITEADD2': 'inline label - visible with data', 'ACRES': 'inline label - visible with data', 'SITEADDNO': 'no label', });
 lyr_CommunityBoundary_2.set('fieldLabels', {});

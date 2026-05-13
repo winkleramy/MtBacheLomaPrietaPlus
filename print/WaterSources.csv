@@ -1,0 +1,39 @@
+wkt_geom,id,type,gallons,material,source,address,Latitude,Longitude,Notes,MakePublic
+Point (-121.89465091066259106 37.1076714981669582),1,pool,,,,25500 Loma Prieta,37.107671,-121.894651,Permission for public disclosure,1
+Point (-121.89605002133028222 37.1060881976903616),2,tank,4000,concrete,well,26700 Havehill,37.106088,-121.89605,Permission to disclose,1
+Point (-121.89599878972781255 37.10602232848717819),3,tank,5000,polyethylene,well,26700 Havenhill,37.106022,-121.895999,Permission to disclose,1
+Point (-121.89615736373548316 37.10604672448835828),4,hydrant,,"red, 3.25 inches",,26700 Havenhill,37.106047,-121.896157,Permission to disclose,1
+Point (-121.89375479155575022 37.10461862738386429),5,tank,1000,polyethylene,"spring-fed, gravity feed to tank",25665 Mt Bache Rd,37.104619,-121.893755,Permission for public disclosure,1
+Point (-121.88387049031943832 37.10535988625739634),6,pool,32000,in-ground,,255 Rancho Prieta,37.10536,-121.88387,Permission for public disclosure,1
+Point (-121.87508488353651614 37.10403500191915782),7,cistern,6500,cement,"well, pumped uphill to cistern",27055 Loma Prieta,37.104035,-121.875085,Permission for public disclosure,1
+Point (-121.88891137776418816 37.10336841471870883),8,tank,15000,polyethylene,"spring-fed, gravity feed to tank",26186 Mt Bache,37.103368,-121.888911,Permission for public disclosure,1
+Point (-121.89483814880178159 37.10141142242558487),9,4x tanks,22000,steel,rain collection,25969 Mar Vista,37.101411,-121.894838,Permission for public disclosure,1
+Point (-121.89700512256783327 37.10502509339667654),10,pool,19340,semi in-ground,well,25525 Mt Bache Rd,37.105025,-121.897005,Permission for public disclosure,1
+Point (-121.89663400992986908 37.10507209370582871),11,hydrant,,"metal, not painted",well,25525 Mt Bache Rd,37.105072,-121.896634,Permission for public disclosure,1
+Point (-121.89674072187879972 37.10509513998617592),12,tank,5000,polyethylene,well,25525 Mt Bache Rd,37.105095,-121.896741,Permission for public disclosure,1
+Point (-121.89152573531875134 37.10530439848641748),13,tank,5000,polyethylene,well,26183 Loma Prieta,37.105304,-121.891526,Permission for public disclosure,1
+Point (-121.8939254462577253 37.1024009734003215),14,2x tanks,10000,polyethylene,spring and well,25973 Mar Vista,37.102401,-121.893925,Permission for public disclosure,1
+Point (-121.89361720212272644 37.10248138491379422),15,hydrant,10000,painted red,tanks,25973 Mar Vista,37.102481,-121.893617,Permission for public disclosure,1
+Point (-121.88114110294088732 37.10662130810727888),16,2x tanks,10000,polyethylene,well,980 Rancho Prieta,37.106621,-121.881141,Permission for public disclosure,1
+Point (-121.88108808408269113 37.1066906404602932),17,12x tanks,60000,polyethylene,rain,980 Rancho Prieta,37.106691,-121.881088,Permission for public disclosure,1
+Point (-121.8813694918684547 37.10678036468184615),18,hydrant,10000,painted red,2x tanks from well,980 Rancho Prieta,37.10678,-121.881369,1x CAL FIRE approved hydrant painted red and marked with blue reflectors next to the driveway. It is connected to the two well water tanks via a 4” pipe. It has a wharf head type with a 2-½” threaded output installed with permit in 2019.,1
+Point (-121.89512834267081587 37.10187715450634016),19,hydrant,,,,25969 Mar Vista,37.101877,-121.895128,Permission for public disclosure,1
+Point (-121.89558100744324065 37.102349595895042),20,hydrant,,,,25967 Mar Vista,37.10235,-121.895581,,
+Point (-121.89573482556980366 37.10248583480713336),21,tank,,,,25967 Mar Vista,37.102486,-121.895735,,
+Point (-121.89753449765048288 37.10379328888285499),22,3x tank,15000,,,25526 Mt Bache,37.103793,-121.897534,Do not disclose!,0
+Point (-121.89224974630241149 37.10634007757823838),23,2x tanks,,,"spring-fed, downstream from multiple cisterns",26181 Loma Prieta Way,37.10634,-121.89225,Not active with Firewise,
+Point (-121.89265406823507476 37.1020771180708735),24,tank,,,,25985 Mar Vista,37.102077,-121.892654,Not active with Firewise,
+Point (-121.89146307645518164 37.10217380375042495),25,3x tanks,15000,polyethylene,,25991 Mar Vista,37.102174,-121.891463,Permission for public disclosure,1
+Point (-121.88984139392091777 37.10258252048669902),26,hydrant,,,,26186 Mt Bache,37.102583,-121.889841,Permission for public disclosure,1
+Point (-121.88998642244023074 37.10248144000353676),27,tank,5000,polyethylene,,25997 Mar Vista,37.102481,-121.889986,Permission for public disclosure,1
+Point (-121.88999081724385576 37.10433165232580421),28,tank,,,,26176 Mt Bache,37.104332,-121.889991,Permission for public disclosure,1
+Point (-121.88972273422328385 37.10469202622230256),29,tank,,,,26166 Mt Bache,37.104692,-121.889723,Not active with Firewise,
+Point (-121.88809226208181258 37.10467884181145592),30,tank,,,,26200 Loma Prieta Way,37.104679,-121.888092,,
+Point (-121.88846582038915756 37.10388338235699024),31,2x tanks,,,,26186 Mt Bache,37.103883,-121.888466,Permission for public disclosure,1
+Point (-121.88671229374644156 37.09951600000000127),32,pool,30000,in-ground,,26115 Highland,37.099516,-121.886712,,
+Point (-121.88703999999999894 37.09941800000000001),33,hydrant,8000,painted yellow,gravity-feed from tanks,26115 Highland,37.099418,-121.88704,fire hose with nozzle included,
+Point (-121.88704190401763583 37.09951934236645599),34,2x tank,8000,polyethylene,well,26115 Highland,37.099519,-121.887042,"1x tank 3000 gal, 1x tank 5000 gal",
+Point (-121.89002404165820792 37.10245111929874184),35,hydrant,5000,painted red,tank,25997 Mar Vista,37.102451,-121.890024,Permission for public disclosure,1
+Point (-121.8902013033959264 37.10215744686758654),36,pool,12000,,,25997 Mar Vista,37.102157,-121.890201,Permission for public disclosure,1
+Point (-121.89224907332125269 37.10201987059353712),37,hydrant,,gray metal,,25991 Mar Vista,37.10202,-121.892249,Permission for public disclosure,1
+Point (-121.8941337154375617 37.10818869339198756),38,tank,,,,25500 Loma Prieta,37.108189,-121.894134,Permission for public disclosure,1

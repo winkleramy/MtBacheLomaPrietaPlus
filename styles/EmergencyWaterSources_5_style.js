@@ -21,8 +21,15 @@ var style_EmergencyWaterSources_5 = function(feature, resolution){
         labelText = String(feature.get("Type"));
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 4.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(31,120,180,1.0)'})}),
+        image: new ol.style.Icon({
+                  imgSize: [700, 700],
+                  scale: 0.054285714285714284,
+                  anchor: [350.0, 350.0],
+                  anchorXUnits: "pixels",
+                  anchorYUnits: "pixels",
+                  rotation: 0.0,
+                  src: "styles/blue-marker.svg"
+            }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

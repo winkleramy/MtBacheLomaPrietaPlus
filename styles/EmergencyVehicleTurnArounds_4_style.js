@@ -21,7 +21,7 @@ var style_EmergencyVehicleTurnArounds_4 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(219,30,42,1.0)', lineDash: [0.1,5], lineCap: 'round', lineJoin: 'round', width: 2.508}),
+        stroke: new ol.style.Stroke({color: 'rgba(219,30,42,1.0)', lineDash: [2.508,5.016], lineCap: 'round', lineJoin: 'round', width: 2.508}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

@@ -21,7 +21,7 @@ var style_CommunityBoundary_2 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(31,120,180,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.9}),fill: new ol.style.Fill({color: 'rgba(166,206,227,0.2)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(31,120,180,0.8)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 4.56}),fill: new ol.style.Fill({color: 'rgba(166,206,227,0.49411764705882355)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
